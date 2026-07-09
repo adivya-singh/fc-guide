@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore, compare and build a squad with top FC Mobile players."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>FC Guide | Player Explorer & Squad Builder</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#players">Skip to players</a>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="brand" href="#" aria-label="FC Guide home">
+          <span class="brand-mark">FC</span>
+          <span>THE FC GUIDE</span>
+        </a>
+        <div class="nav-links">
+          <a href="#players">Players</a>
+          <a href="#compare">Compare</a>
+          <a href="#squad">My squad</a>
+          <a href="#about">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">FC Mobile squad intelligence</p>
+          <h1 id="hero-title">Build smarter. Play better.</h1>
+          <p class="hero-text">
+            Explore elite cards, compare ratings and create your starting squad
+            with a guide designed for FC Mobile players.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#players">Explore players</a>
+            <a class="button button-secondary" href="#squad">Build my squad</a>
+          </div>
+          <dl class="hero-stats" aria-label="Guide statistics">
+            <div><dt id="player-count">15</dt><dd>Players</dd></div>
+            <div><dt>5</dt><dd>Positions</dd></div>
+            <div><dt>11</dt><dd>Squad slots</dd></div>
+          </dl>
+        </div>
+        <div class="hero-visual">
+          <img
+            src="FC 2 2.webp"
+            alt="FC Mobile footballers featured in the game"
+            fetchpriority="high"
+          />
+          <div class="hero-badge" aria-hidden="true">
+            <strong>Meta ready</strong>
+            <span>Curated player picks</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip" id="about" aria-labelledby="about-title">
+        <div class="shell">
+          <p class="eyebrow">One guide, every decision</p>
+          <h2 id="about-title">Find the right player for your system</h2>
+          <div class="feature-grid">
+            <article>
+              <span class="feature-number">01</span>
+              <h3>Discover</h3>
+              <p>Search and filter a curated catalogue by role and rating.</p>
+            </article>
+            <article>
+              <span class="feature-number">02</span>
+              <h3>Compare</h3>
+              <p>Place two cards side by side before spending your coins.</p>
+            </article>
+            <article>
+              <span class="feature-number">03</span>
+              <h3>Build</h3>
+              <p>Save favourites and assemble an eleven that persists locally.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalogue shell" id="players" aria-labelledby="players-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Player database</p>
+            <h2 id="players-title">Explore top cards</h2>
+          </div>
+          <p id="results-count" class="results-count" aria-live="polite"></p>
+        </div>
+
+        <form class="filters" id="filters" role="search">
+          <label class="search-field">
+            <span class="visually-hidden">Search players</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" />
+            </svg>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search name, nation or nickname"
+              autocomplete="off"
+            />
+          </label>
+          <label>
+            <span class="visually-hidden">Filter by position</span>
+            <select id="position-filter">
+              <option value="all">All positions</option>
+              <option value="Striker">Strikers</option>
+              <option value="Winger">Wingers</option>
+              <option value="Midfielder">Midfielders</option>
+              <option value="Centreback">Centre-backs</option>
+              <option value="Fullback">Fullbacks</option>
+            </select>
+          </label>
+          <label>
+            <span class="visually-hidden">Sort players</span>
+            <select id="sort">
+              <option value="rating-desc">Highest rated</option>
+              <option value="rating-asc">Lowest rated</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </label>
+          <button class="text-button" id="clear-filters" type="reset">Clear</button>
+        </form>
+
+        <div class="player-grid" id="player-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span>⚽</span>
+          <h3>No players found</h3>
+          <p>Try a different name or broaden your filters.</p>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Squad planning tools">
+        <div class="shell workspace-grid">
+          <article class="tool-card" id="compare">
+            <div class="tool-heading">
+              <div>
+                <p class="eyebrow">Head to head</p>
+                <h2>Compare players</h2>
+              </div>
+              <button class="text-button" id="clear-compare" type="button">Clear</button>
+            </div>
+            <div id="compare-content" class="compare-content"></div>
+          </article>
+
+          <article class="tool-card squad-card" id="squad">
+            <div class="tool-heading">
+              <div>
+                <p class="eyebrow">Your selection</p>
+                <h2>My squad</h2>
+              </div>
+              <button class="text-button" id="clear-squad" type="button">Clear</button>
+            </div>
+            <div class="squad-progress">
+              <div>
+                <strong id="squad-count">0 / 11</strong>
+                <span>players selected</span>
+              </div>
+              <div class="progress-track" aria-hidden="true">
+                <span id="squad-progress"></span>
+              </div>
+            </div>
+            <div id="squad-list" class="squad-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonial-section shell" aria-labelledby="testimonial-title">
+        <div class="testimonial-media">
+          <img id="carousel-img" src="testimonial img.jpg" alt="FC Mobile player Selena" />
+        </div>
+        <div class="testimonial-copy">
+          <p class="eyebrow">Community stories</p>
+          <h2 id="testimonial-title">Built for players who want an edge</h2>
+          <blockquote id="carousel-text"></blockquote>
+          <p class="testimonial-person">
+            <strong id="carousel-author"></strong>
+            <span id="carousel-job"></span>
+          </p>
+          <div class="carousel-controls">
+            <button id="carousel-prev" type="button" aria-label="Previous testimonial">←</button>
+            <div id="carousel-dots" class="dots" aria-label="Choose testimonial"></div>
+            <button id="carousel-next" type="button" aria-label="Next testimonial">→</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <a class="brand" href="#" aria-label="FC Guide home">
+          <span class="brand-mark">FC</span>
+          <span>THE FC GUIDE</span>
+        </a>
+        <p>Designed and built by Adivya Singh as an FC Mobile portfolio project.</p>
+        <p>© <span id="year"></span> The FC Guide</p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
