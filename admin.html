@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Panel | THE FC GUIDE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Admin Panel</h1>
+
+      <form id="player-form">
+        <input type="text" id="name" placeholder="Player Name" required />
+
+        <input type="text" id="nickname" placeholder="Nickname" />
+
+        <input type="text" id="position" placeholder="Position" required />
+
+        <input type="text" id="roles" placeholder="Roles" />
+
+        <input type="text" id="nation" placeholder="Nation" />
+
+        <input type="number" id="rating" placeholder="Rating" required />
+
+        <input type="text" id="card" placeholder="Card" />
+
+        <input type="text" id="image" placeholder="Image filename" />
+
+        <button id="submit-btn" type="submit">Add Player</button>
+
+        <button type="button" id="cancel-btn">Cancel</button>
+      </form>
+
+      <hr />
+
+      <div id="players-list"></div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

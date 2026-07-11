@@ -1,170 +1,232 @@
-const players = [
-  {
-    id: "ronaldo-nazario",
-    name: "Ronaldo Nazario",
-    nickname: "O Fenômeno",
-    position: "Striker",
-    roles: "ST",
-    nation: "Brazil",
-    rating: 109,
-    card: "Icon Striker",
-    image: "r9.jpg",
-  },
-  {
-    id: "johan-cruyff",
-    name: "Johan Cruyff",
-    nickname: "The Total Footballer",
-    position: "Striker",
-    roles: "ST / CF",
-    nation: "Netherlands",
-    rating: 111,
-    card: "Icon Striker",
-    image: "JOHAN CRUYFF.jpg",
-  },
-  {
-    id: "david-ginola",
-    name: "David Ginola",
-    nickname: "The Magician",
-    position: "Striker",
-    roles: "LW / ST",
-    nation: "France",
-    rating: 111,
-    card: "Heroes Striker",
-    image: "david ginola.jpg",
-  },
-  {
-    id: "lionel-messi",
-    name: "Lionel Messi",
-    nickname: "La Pulga",
-    position: "Winger",
-    roles: "RW / CAM",
-    nation: "Argentina",
-    rating: 111,
-    card: "Inter Miami",
-    image: "messi3.jpg",
-  },
-  {
-    id: "gareth-bale",
-    name: "Gareth Bale",
-    nickname: "The Welsh Wizard",
-    position: "Winger",
-    roles: "RW / ST",
-    nation: "Wales",
-    rating: 111,
-    card: "Icon Striker",
-    image: "bale.jpg",
-  },
-  {
-    id: "cristiano-ronaldo",
-    name: "Cristiano Ronaldo",
-    nickname: "El Bicho",
-    position: "Winger",
-    roles: "ST / LW",
-    nation: "Portugal",
-    rating: 111,
-    card: "Al Nassr",
-    image: "cr7.jpg",
-  },
-  {
-    id: "zinedine-zidane",
-    name: "Zinedine Zidane",
-    nickname: "Zizou",
-    position: "Midfielder",
-    roles: "CAM / CM",
-    nation: "France",
-    rating: 111,
-    card: "Icon Midfielder",
-    image: "ZIDANE.jpg",
-  },
-  {
-    id: "ruud-gullit",
-    name: "Ruud Gullit",
-    nickname: "Captain Dreadlocks",
-    position: "Midfielder",
-    roles: "CM / CAM / ST",
-    nation: "Netherlands",
-    rating: 109,
-    card: "Icon Midfielder",
-    image: "gullit.jpg",
-  },
-  {
-    id: "kevin-de-bruyne",
-    name: "Kevin De Bruyne",
-    nickname: "King Kev",
-    position: "Midfielder",
-    roles: "CM / CAM",
-    nation: "Belgium",
-    rating: 109,
-    card: "Napoli",
-    image: "de bryuyne.jpg",
-  },
-  {
-    id: "paolo-maldini",
-    name: "Paolo Maldini",
-    nickname: "Il Capitano",
-    position: "Centreback",
-    roles: "CB / LB",
-    nation: "Italy",
-    rating: 111,
-    card: "Icon Defender",
-    image: "MALDINI.jpeg",
-  },
-  {
-    id: "virgil-van-dijk",
-    name: "Virgil van Dijk",
-    nickname: "VVD",
-    position: "Centreback",
-    roles: "CB",
-    nation: "Netherlands",
-    rating: 111,
-    card: "Icon Defender",
-    image: "vvd.jpeg",
-  },
-  {
-    id: "laurent-blanc",
-    name: "Laurent Blanc",
-    nickname: "Le Président",
-    position: "Centreback",
-    roles: "CB",
-    nation: "France",
-    rating: 111,
-    card: "Icon Defender",
-    image: "blanc 2.jpg",
-  },
-  {
-    id: "roberto-carlos",
-    name: "Roberto Carlos",
-    nickname: "The Bullet Man",
-    position: "Fullback",
-    roles: "LB",
-    nation: "Brazil",
-    rating: 111,
-    card: "Icon Defender",
-    image: "rcarlos.jpg",
-  },
-  {
-    id: "marcelo",
-    name: "Marcelo",
-    nickname: "The Samba Left-Back",
-    position: "Fullback",
-    roles: "LB",
-    nation: "Brazil",
-    rating: 111,
-    card: "Icon Defender",
-    image: "marcelo.jpg",
-  },
-  {
-    id: "carlos-alberto",
-    name: "Carlos Alberto",
-    nickname: "O Capitão",
-    position: "Fullback",
-    roles: "RB",
-    nation: "Brazil",
-    rating: 111,
-    card: "Icon Defender",
-    image: "calberto.jpg",
-  },
-];
+// const playersBackup = [
+//   {
+//     id: "ronaldo-nazario",
+//     name: "Ronaldo Nazario",
+//     nickname: "O Fenômeno",
+//     position: "Striker",
+//     roles: "ST",
+//     nation: "Brazil",
+//     rating: 109,
+//     card: "Icon Striker",
+//     image: "r9.jpg",
+//   },
+//   {
+//     id: "johan-cruyff",
+//     name: "Johan Cruyff",
+//     nickname: "The Total Footballer",
+//     position: "Striker",
+//     roles: "ST / CF",
+//     nation: "Netherlands",
+//     rating: 111,
+//     card: "Icon Striker",
+//     image: "JOHAN CRUYFF.jpg",
+//   },
+//   {
+//     id: "david-ginola",
+//     name: "David Ginola",
+//     nickname: "The Magician",
+//     position: "Striker",
+//     roles: "LW / ST",
+//     nation: "France",
+//     rating: 111,
+//     card: "Heroes Striker",
+//     image: "david ginola.jpg",
+//   },
+//   {
+//     id: "lionel-messi",
+//     name: "Lionel Messi",
+//     nickname: "La Pulga",
+//     position: "Winger",
+//     roles: "RW / CAM",
+//     nation: "Argentina",
+//     rating: 111,
+//     card: "Inter Miami",
+//     image: "messi3.jpg",
+//   },
+//   {
+//     id: "gareth-bale",
+//     name: "Gareth Bale",
+//     nickname: "The Welsh Wizard",
+//     position: "Winger",
+//     roles: "RW / ST",
+//     nation: "Wales",
+//     rating: 111,
+//     card: "Icon Striker",
+//     image: "bale.jpg",
+//   },
+//   {
+//     id: "cristiano-ronaldo",
+//     name: "Cristiano Ronaldo",
+//     nickname: "El Bicho",
+//     position: "Winger",
+//     roles: "ST / LW",
+//     nation: "Portugal",
+//     rating: 111,
+//     card: "Al Nassr",
+//     image: "cr7.jpg",
+//   },
+//   {
+//     id: "zinedine-zidane",
+//     name: "Zinedine Zidane",
+//     nickname: "Zizou",
+//     position: "Midfielder",
+//     roles: "CAM / CM",
+//     nation: "France",
+//     rating: 111,
+//     card: "Icon Midfielder",
+//     image: "ZIDANE.jpg",
+//   },
+//   {
+//     id: "ruud-gullit",
+//     name: "Ruud Gullit",
+//     nickname: "Captain Dreadlocks",
+//     position: "Midfielder",
+//     roles: "CM / CAM / ST",
+//     nation: "Netherlands",
+//     rating: 109,
+//     card: "Icon Midfielder",
+//     image: "gullit.jpg",
+//   },
+//   {
+//     id: "kevin-de-bruyne",
+//     name: "Kevin De Bruyne",
+//     nickname: "King Kev",
+//     position: "Midfielder",
+//     roles: "CM / CAM",
+//     nation: "Belgium",
+//     rating: 109,
+//     card: "Napoli",
+//     image: "de bryuyne.jpg",
+//   },
+//   {
+//     id: "paolo-maldini",
+//     name: "Paolo Maldini",
+//     nickname: "Il Capitano",
+//     position: "Centreback",
+//     roles: "CB / LB",
+//     nation: "Italy",
+//     rating: 111,
+//     card: "Icon Defender",
+//     image: "MALDINI.jpeg",
+//   },
+//   {
+//     id: "virgil-van-dijk",
+//     name: "Virgil van Dijk",
+//     nickname: "VVD",
+//     position: "Centreback",
+//     roles: "CB",
+//     nation: "Netherlands",
+//     rating: 111,
+//     card: "Icon Defender",
+//     image: "vvd.jpeg",
+//   },
+//   {
+//     id: "laurent-blanc",
+//     name: "Laurent Blanc",
+//     nickname: "Le Président",
+//     position: "Centreback",
+//     roles: "CB",
+//     nation: "France",
+//     rating: 111,
+//     card: "Icon Defender",
+//     image: "blanc 2.jpg",
+//   },
+//   {
+//     id: "roberto-carlos",
+//     name: "Roberto Carlos",
+//     nickname: "The Bullet Man",
+//     position: "Fullback",
+//     roles: "LB",
+//     nation: "Brazil",
+//     rating: 111,
+//     card: "Icon Defender",
+//     image: "rcarlos.jpg",
+//   },
+//   {
+//     id: "marcelo",
+//     name: "Marcelo",
+//     nickname: "The Samba Left-Back",
+//     position: "Fullback",
+//     roles: "LB",
+//     nation: "Brazil",
+//     rating: 111,
+//     card: "Icon Defender",
+//     image: "marcelo.jpg",
+//   },
+//   {
+//     id: "carlos-alberto",
+//     name: "Carlos Alberto",
+//     nickname: "O Capitão",
+//     position: "Fullback",
+//     roles: "RB",
+//     nation: "Brazil",
+//     rating: 111,
+//     card: "Icon Defender",
+//     image: "calberto.jpg",
+//   },
+// ];
+async function loadPlayers() {
+  try {
+    const search = elements.search.value;
+    const position = elements.position.value;
+    const sort = elements.sort.value;
+
+    let url = "http://localhost:3000/api/players?";
+
+    if (search) {
+      url += `search=${encodeURIComponent(search)}&`;
+    }
+
+    if (position !== "all") {
+      url += `position=${encodeURIComponent(position)}&`;
+    }
+    if (sort) {
+      url += `sort=${encodeURIComponent(sort)}`;
+    }
+    const response = await fetch(url);
+
+    players = await response.json();
+
+    document.querySelector("#player-count").textContent = players.length;
+
+    renderPlayers();
+    renderCompare();
+    renderSquad();
+  } catch (error) {
+    console.error(error);
+  }
+}
+async function loadFavorites() {
+  if (!token) return;
+
+  const response = await fetch("http://localhost:3000/api/users/favorites", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  const favourites = await response.json();
+
+  state.favourites = new Set(favourites);
+
+  renderPlayers();
+}
+async function loadSquad() {
+  if (!token) return;
+
+  const response = await fetch("http://localhost:3000/api/users/squad", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  const squad = await response.json();
+
+  state.squad = squad;
+
+  renderSquad();
+  renderPlayers();
+}
 
 const testimonials = [
   {
@@ -196,6 +258,8 @@ const testimonials = [
     job: "FC Mobile player",
   },
 ];
+let players = [];
+let token = localStorage.getItem("token");
 
 const elements = {
   grid: document.querySelector("#player-grid"),
@@ -265,6 +329,7 @@ function cardTemplate(player) {
       <div class="player-image-wrap">
         <img src="${player.image}" alt="${player.name} FC Mobile card artwork" loading="lazy">
         <span class="rating-badge" aria-label="Rating ${player.rating}">${player.rating}</span>
+       
         <button
           class="favourite-button"
           type="button"
@@ -300,7 +365,7 @@ function cardTemplate(player) {
             data-id="${player.id}"
             aria-pressed="${isInSquad}"
           >${isInSquad ? "In squad" : "Add to squad"}</button>
-          <a class="button button-primary wide" href="players/${player.id}.html">
+          <a class="button button-primary wide" href="player.html?id=${player.id}">
             View full profile
           </a>
         </div>
@@ -422,18 +487,31 @@ function renderSquad() {
     )
     .join("");
 }
+async function toggleFavourite(id) {
+  if (!token) {
+    showToast("Please login to save favourites");
 
-function toggleFavourite(id) {
-  const player = playerById(id);
-  if (!player) return;
-  if (state.favourites.has(id)) {
-    state.favourites.delete(id);
-    showToast(`${player.name} removed from favourites`);
-  } else {
-    state.favourites.add(id);
-    showToast(`${player.name} saved to favourites`);
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 1000);
+
+    return;
   }
-  saveState();
+
+  const response = await fetch(
+    `http://localhost:3000/api/users/favorites/${id}`,
+    {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  );
+
+  const favourites = await response.json();
+
+  state.favourites = new Set(favourites);
+
   renderPlayers();
 }
 
@@ -458,21 +536,43 @@ function toggleCompare(id) {
   renderPlayers();
 }
 
-function toggleSquad(id) {
+async function toggleSquad(id) {
+  if (!token) {
+    showToast("Please login to save your squad");
+
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 1000);
+
+    return;
+  }
   const player = playerById(id);
   if (!player) return;
 
-  if (state.squad.includes(id)) {
-    state.squad = state.squad.filter((playerId) => playerId !== id);
+  let squad = [...state.squad];
+
+  if (squad.includes(id)) {
+    squad = squad.filter((playerId) => playerId !== id);
     showToast(`${player.name} removed from your squad`);
-  } else if (state.squad.length >= 11) {
+  } else if (squad.length >= 11) {
     showToast("Your squad already has eleven players");
     return;
   } else {
-    state.squad.push(id);
+    squad.push(id);
     showToast(`${player.name} added to your squad`);
   }
-  saveState();
+
+  const response = await fetch("http://localhost:3000/api/users/squad", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ squad }),
+  });
+
+  state.squad = await response.json();
+
   renderSquad();
   renderPlayers();
 }
@@ -491,10 +591,10 @@ elements.squadList.addEventListener("click", (event) => {
   if (button) toggleSquad(button.dataset.removeSquad);
 });
 
-elements.filters.addEventListener("input", renderPlayers);
-elements.filters.addEventListener("change", renderPlayers);
+elements.filters.addEventListener("input", loadPlayers);
+elements.filters.addEventListener("change", loadPlayers);
 elements.filters.addEventListener("reset", () => {
-  window.setTimeout(renderPlayers);
+  window.setTimeout(loadPlayers);
 });
 
 document.querySelector("#clear-compare").addEventListener("click", () => {
@@ -572,11 +672,44 @@ carouselElements.section.addEventListener("mouseenter", () =>
 );
 carouselElements.section.addEventListener("mouseleave", startCarousel);
 
-document.querySelector("#player-count").textContent = players.length;
+// document.querySelector("#player-count").textContent = players.length;
 document.querySelector("#year").textContent = new Date().getFullYear();
 
-renderPlayers();
-renderCompare();
-renderSquad();
+// renderPlayers();
+// renderCompare();
+// renderSquad();
 renderTestimonial();
 startCarousel();
+loadPlayers().then(async () => {
+  await loadFavorites();
+  await loadSquad();
+});
+
+const loginLink = document.querySelector("#login-link");
+const registerLink = document.querySelector("#register-link");
+const logoutLink = document.querySelector("#logout-link");
+const username = document.querySelector("#username");
+const adminLink = document.querySelector("#admin-link");
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (user) {
+  loginLink.hidden = true;
+  registerLink.hidden = true;
+
+  logoutLink.hidden = false;
+  username.hidden = false;
+
+  username.textContent = `Hi, ${user.username}`;
+
+  if (user.isAdmin) {
+    adminLink.hidden = false;
+  }
+}
+logoutLink?.addEventListener("click", function () {
+  localStorage.removeItem("token");
+
+  localStorage.removeItem("user");
+
+  window.location.reload();
+});

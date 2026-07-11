@@ -35,8 +35,16 @@ body::before {
   z-index: -1;
   inset: 0;
   background:
-    radial-gradient(circle at 12% 8%, rgba(56, 224, 123, 0.13), transparent 28%),
-    radial-gradient(circle at 90% 35%, rgba(217, 255, 98, 0.07), transparent 25%);
+    radial-gradient(
+      circle at 12% 8%,
+      rgba(56, 224, 123, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 35%,
+      rgba(217, 255, 98, 0.07),
+      transparent 25%
+    );
   content: "";
   pointer-events: none;
 }
@@ -63,7 +71,7 @@ img {
 }
 
 .shell {
-  width: min(1180px, calc(100% - 40px));
+  width: min(1320px, calc(100% - 40px));
   margin-inline: auto;
 }
 
@@ -124,9 +132,24 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 2.4rem;
+}
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-left: 1.5rem;
 }
 
+#username {
+  color: var(--green);
+  font-weight: 700;
+}
+
+#admin-link {
+  color: var(--green);
+  font-weight: 700;
+}
 .nav-links a {
   color: var(--muted);
   font-size: 0.9rem;
@@ -994,6 +1017,47 @@ h3 {
   color: var(--muted);
   font-size: 0.78rem;
   text-align: center;
+}
+#player-form input {
+  background-color: #16241d;
+  color: #fff;
+  border: 1px solid #2c4a3c;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+#player-form input::placeholder {
+  color: #9aa7a0;
+}
+
+#player-form button {
+  background-color: #3ddc84;
+  color: #08120d;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#player-form button:hover {
+  opacity: 0.9;
+}
+.edit-btn,
+.delete-btn {
+  background-color: #3ddc84;
+  color: #08120d;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.delete-btn {
+  background-color: #ff5f5f;
+  color: white;
 }
 
 @media (max-width: 900px) {
