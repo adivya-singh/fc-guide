@@ -31,20 +31,24 @@ async function loadPlayers() {
     playersList.innerHTML = players
       .map(
         (player) => `
-      <div class="player-item">
-        <h3>${player.name}</h3>
-        <p>${player.position} | ${player.rating}</p>
+     <div class="player-item">
 
+    <div class="player-info">
+        <h3>${player.name}</h3>
+        <p>${player.position} • ${player.rating}</p>
+    </div>
+
+    <div class="player-actions">
         <button data-id="${player.id}" class="edit-btn">
-          Edit
+            Edit
         </button>
 
         <button data-id="${player.id}" class="delete-btn">
-          Delete
+            Delete
         </button>
+    </div>
 
-        <hr>
-      </div>
+</div>
     `,
       )
       .join("");
