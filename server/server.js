@@ -8,7 +8,7 @@ dotenv.config();
 connectDB();
 const app = express();
 app.use(cors());
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Import Routes
 const playerRoutes = require("./routes/playerRoutes");
@@ -24,7 +24,6 @@ app.use("/api/users", userRoutes);
 app.get("/", (req, res) => {
   res.send("FC Guide Backend is Running 🚀");
 });
-
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
