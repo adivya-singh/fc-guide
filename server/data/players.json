@@ -1,0 +1,183 @@
+[
+  {
+    "id": "ronaldo-nazario",
+    "name": "Ronaldo Nazario",
+    "nickname": "O Fenômeno",
+    "position": "Striker",
+    "roles": "ST",
+    "nation": "Brazil",
+    "rating": 109,
+    "card": "Icon Striker",
+    "image": "r9.jpg",
+    "review": "R9 is an explosive striker with elite acceleration, finishing and strength. His quick runs make him especially dangerous in H2H and VSA.",
+    "pros": [
+      "Explosive pace",
+      "Clinical finishing",
+      "Strong on the ball",
+      "Excellent skill moves"
+    ],
+    "cons": ["Aggressive work rates can drain stamina in longer matches."]
+  },
+  {
+    "id": "johan-cruyff",
+    "name": "Johan Cruyff",
+    "nickname": "The Total Footballer",
+    "position": "Striker",
+    "roles": "ST / CF",
+    "nation": "Netherlands",
+    "rating": 111,
+    "card": "Icon Striker",
+    "image": "JOHAN CRUYFF.jpg"
+  },
+  {
+    "id": "david-ginola",
+    "name": "David Ginola",
+    "nickname": "The Magician",
+    "position": "Striker",
+    "roles": "LW / ST",
+    "nation": "France",
+    "rating": 111,
+    "card": "Heroes Striker",
+    "image": "david ginola.jpg"
+  },
+  {
+    "id": "lionel-messi",
+    "name": "Lionel Messi",
+    "nickname": "La Pulga",
+    "position": "Winger",
+    "roles": "RW / CAM",
+    "nation": "Argentina",
+    "rating": 111,
+    "card": "Inter Miami",
+    "image": "messi3.jpg",
+    "review": "Messi remains a meta winger with unmatched dribbling and finesse shots. His low centre of gravity makes him nearly impossible to dispossess in tight spaces.",
+    "pros": [
+      "Best-in-class dribbling",
+      "Finesse shot specialist",
+      "Excellent free kicks",
+      "Tight turning radius"
+    ],
+    "cons": ["Physical battles against tall centre-backs can be tough."]
+  },
+  {
+    "id": "gareth-bale",
+    "name": "Gareth Bale",
+    "nickname": "The Welsh Wizard",
+    "position": "Winger",
+    "roles": "RW / ST",
+    "nation": "Wales",
+    "rating": 111,
+    "card": "Icon Striker",
+    "image": "bale.jpg"
+  },
+  {
+    "id": "cristiano-ronaldo",
+    "name": "Cristiano Ronaldo",
+    "nickname": "El Bicho",
+    "position": "Winger",
+    "roles": "ST / LW",
+    "nation": "Portugal",
+    "rating": 111,
+    "card": "Al Nassr",
+    "image": "cr7.jpg"
+  },
+  {
+    "id": "zinedine-zidane",
+    "name": "Zinedine Zidane",
+    "nickname": "Zizou",
+    "position": "Midfielder",
+    "roles": "CAM / CM",
+    "nation": "France",
+    "rating": 111,
+    "card": "Icon Midfielder",
+    "image": "ZIDANE.jpg"
+  },
+  {
+    "id": "ruud-gullit",
+    "name": "Ruud Gullit",
+    "nickname": "Captain Dreadlocks",
+    "position": "Midfielder",
+    "roles": "CM / CAM / ST",
+    "nation": "Netherlands",
+    "rating": 109,
+    "card": "Icon Midfielder",
+    "image": "gullit.jpg"
+  },
+  {
+    "id": "kevin-de-bruyne",
+    "name": "Kevin De Bruyne",
+    "nickname": "King Kev",
+    "position": "Midfielder",
+    "roles": "CM / CAM",
+    "nation": "Belgium",
+    "rating": 109,
+    "card": "Napoli",
+    "image": "de bryuyne.jpg"
+  },
+  {
+    "id": "paolo-maldini",
+    "name": "Paolo Maldini",
+    "nickname": "Il Capitano",
+    "position": "Centreback",
+    "roles": "CB / LB",
+    "nation": "Italy",
+    "rating": 111,
+    "card": "Icon Defender",
+    "image": "MALDINI.jpeg"
+  },
+  {
+    "id": "virgil-van-dijk",
+    "name": "Virgil van Dijk",
+    "nickname": "VVD",
+    "position": "Centreback",
+    "roles": "CB",
+    "nation": "Netherlands",
+    "rating": 111,
+    "card": "Icon Defender",
+    "image": "vvd.jpeg"
+  },
+  {
+    "id": "laurent-blanc",
+    "name": "Laurent Blanc",
+    "nickname": "Le Président",
+    "position": "Centreback",
+    "roles": "CB",
+    "nation": "France",
+    "rating": 111,
+    "card": "Icon Defender",
+    "image": "blanc 2.jpg"
+  },
+  {
+    "id": "roberto-carlos",
+    "name": "Roberto Carlos",
+    "nickname": "The Bullet Man",
+    "position": "Fullback",
+    "roles": "LB",
+    "nation": "Brazil",
+    "rating": 111,
+    "card": "Icon Defender",
+    "image": "rcarlos.jpg"
+  },
+  {
+    "id": "marcelo",
+    "name": "Marcelo",
+    "nickname": "The Samba Left-Back",
+    "position": "Fullback",
+    "roles": "LB",
+    "nation": "Brazil",
+    "rating": 111,
+    "card": "Icon Defender",
+    "image": "marcelo.jpg"
+  },
+  {
+    "id": "carlos-alberto",
+    "name": "Carlos Alberto",
+    "nickname": "O Capitão",
+    "position": "Fullback",
+    "roles": "RB",
+    "nation": "Brazil",
+    "rating": 111,
+    "card": "Icon Defender",
+    "image": "calberto.jpg"
+  }
+]

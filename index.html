@@ -27,9 +27,24 @@
         </a>
         <div class="nav-links">
           <a href="#players">Players</a>
+
           <a href="#compare">Compare</a>
-          <a href="#squad">My squad</a>
+
+          <a href="#squad">My Squad</a>
+
           <a href="#about">About</a>
+
+          <div class="nav-auth">
+            <a href="login.html" id="login-link">Login</a>
+
+            <a href="register.html" id="register-link">Register</a>
+
+            <a href="admin.html" id="admin-link" hidden>Admin</a>
+
+            <span id="username" hidden></span>
+
+            <a href="#" id="logout-link" hidden>Logout</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -48,9 +63,18 @@
             <a class="button button-secondary" href="#squad">Build my squad</a>
           </div>
           <dl class="hero-stats" aria-label="Guide statistics">
-            <div><dt id="player-count">15</dt><dd>Players</dd></div>
-            <div><dt>5</dt><dd>Positions</dd></div>
-            <div><dt>11</dt><dd>Squad slots</dd></div>
+            <div>
+              <dt id="player-count">15</dt>
+              <dd>Players</dd>
+            </div>
+            <div>
+              <dt>5</dt>
+              <dd>Positions</dd>
+            </div>
+            <div>
+              <dt>11</dt>
+              <dd>Squad slots</dd>
+            </div>
           </dl>
         </div>
         <div class="hero-visual">
@@ -84,13 +108,19 @@
             <article>
               <span class="feature-number">03</span>
               <h3>Build</h3>
-              <p>Save favourites and assemble an eleven that persists locally.</p>
+              <p>
+                Save favourites and assemble an eleven that persists locally.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="catalogue shell" id="players" aria-labelledby="players-title">
+      <section
+        class="catalogue shell"
+        id="players"
+        aria-labelledby="players-title"
+      >
         <div class="section-heading">
           <div>
             <p class="eyebrow">Player database</p>
@@ -103,7 +133,9 @@
           <label class="search-field">
             <span class="visually-hidden">Search players</span>
             <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" />
+              <path
+                d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"
+              />
             </svg>
             <input
               id="search"
@@ -131,7 +163,9 @@
               <option value="name">Name A–Z</option>
             </select>
           </label>
-          <button class="text-button" id="clear-filters" type="reset">Clear</button>
+          <button class="text-button" id="clear-filters" type="reset">
+            Clear
+          </button>
         </form>
 
         <div class="player-grid" id="player-grid" aria-live="polite"></div>
@@ -150,7 +184,9 @@
                 <p class="eyebrow">Head to head</p>
                 <h2>Compare players</h2>
               </div>
-              <button class="text-button" id="clear-compare" type="button">Clear</button>
+              <button class="text-button" id="clear-compare" type="button">
+                Clear
+              </button>
             </div>
             <div id="compare-content" class="compare-content"></div>
           </article>
@@ -161,7 +197,9 @@
                 <p class="eyebrow">Your selection</p>
                 <h2>My squad</h2>
               </div>
-              <button class="text-button" id="clear-squad" type="button">Clear</button>
+              <button class="text-button" id="clear-squad" type="button">
+                Clear
+              </button>
             </div>
             <div class="squad-progress">
               <div>
@@ -177,9 +215,16 @@
         </div>
       </section>
 
-      <section class="testimonial-section shell" aria-labelledby="testimonial-title">
+      <section
+        class="testimonial-section shell"
+        aria-labelledby="testimonial-title"
+      >
         <div class="testimonial-media">
-          <img id="carousel-img" src="testimonial img.jpg" alt="FC Mobile player Selena" />
+          <img
+            id="carousel-img"
+            src="testimonial img.jpg"
+            alt="FC Mobile player Selena"
+          />
         </div>
         <div class="testimonial-copy">
           <p class="eyebrow">Community stories</p>
@@ -190,9 +235,25 @@
             <span id="carousel-job"></span>
           </p>
           <div class="carousel-controls">
-            <button id="carousel-prev" type="button" aria-label="Previous testimonial">←</button>
-            <div id="carousel-dots" class="dots" aria-label="Choose testimonial"></div>
-            <button id="carousel-next" type="button" aria-label="Next testimonial">→</button>
+            <button
+              id="carousel-prev"
+              type="button"
+              aria-label="Previous testimonial"
+            >
+              ←
+            </button>
+            <div
+              id="carousel-dots"
+              class="dots"
+              aria-label="Choose testimonial"
+            ></div>
+            <button
+              id="carousel-next"
+              type="button"
+              aria-label="Next testimonial"
+            >
+              →
+            </button>
           </div>
         </div>
       </section>
@@ -204,7 +265,9 @@
           <span class="brand-mark">FC</span>
           <span>THE FC GUIDE</span>
         </a>
-        <p>Designed and built by Adivya Singh as an FC Mobile portfolio project.</p>
+        <p>
+          Designed and built by Adivya Singh as an FC Mobile portfolio project.
+        </p>
         <p>© <span id="year"></span> The FC Guide</p>
       </div>
     </footer>
